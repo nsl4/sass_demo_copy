@@ -1,0 +1,772 @@
+/*
+Colors:
+Background: #4E4F48
+Highlight:  #C2CF52
+*/
+/* CSS Reset */
+/* line 8, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, em, img, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 22, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* Remove if not using HTML5 */
+/* line 23, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 24, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 25, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 26, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+/* line 28, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 29, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 30, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* END RESET CSS */
+/*My sass code*/
+/* line 51, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul li a {
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3 ease-in;
+  transition: all .3s ease-in;
+}
+
+/* BASE STYLES */
+/* line 59, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+body, select, input, textarea {
+  color: cyan;
+}
+
+/* line 60, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 61, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus treatment */
+/* line 64, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* hand cursor on clickable input elements */
+/* line 67, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/*  j.mp/webkit-tap-highlight-color */
+/* line 70, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/* always force a scrollbar in non-IE */
+/* line 73, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* make buttons play nice in IE */
+/* line 76, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* bicubic resizing for non-native sized IMG */
+/* line 79, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* videofitness styles */
+/* line 83, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+body {
+  background-color: cyan;
+  font-family: Verdana, Arial, san-serif;
+  font-size: 80%;
+}
+
+/* line 88, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#container {
+  width: 820px;
+  margin: 0 auto;
+  background-color: #c0c0c0;
+  padding: 0 70px;
+  -moz-box-shadow: -3px 0px 5px #20211D;
+  -webkit-box-shadow: -3px 0px 5px #20211D;
+  box-shadow: -3px 0px 5px #000;
+  behavior: url(PIE.htc);
+}
+
+/* line 98, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header {
+  height: 125px;
+  background: transparent url(../images/logo.png) no-repeat 0 18px;
+  border-bottom: 2px solid #C2CF52;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* line 105, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header h1 {
+  text-indent: -9999px;
+  height: 44px;
+}
+
+/* line 110, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header form {
+  float: right;
+  margin-top: 45px;
+}
+
+/* line 116, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.branding #logo {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 125px;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* line 125, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header input {
+  position: relative;
+  height: 16px;
+  width: 150px;
+  border: 2px solid cyan;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  behaviour: url(PIE.htc);
+}
+
+/* line 135, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header input[type="text"] {
+  padding: 5px;
+  background: url(../images/search.png) no-repeat 5px 5px;
+  padding-left: 30px;
+  font: bold italic 1.2em Georgia, "Times New Roman", Times, serif;
+  color: #ddd;
+}
+
+/* line 142, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header input[type="submit"] {
+  height: 30px;
+  width: 40px;
+  font-weight: bold;
+}
+
+/* line 148, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header .account {
+  position: absolute;
+  top: 20px;
+  right: 145px;
+}
+
+/* line 153, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header .account a {
+  display: block;
+  font-size: .9em;
+  color: cyan;
+  padding-top: 0px;
+}
+
+/* line 159, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header .account a:hover {
+  text-decoration: underline;
+}
+
+/* line 160, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header .account a[href^="cart"] {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  height: 50px;
+  width: 86px;
+  margin-top: 18px;
+}
+
+/* line 168, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header .account a[href^="cart"] img {
+  margin: -48px 25px 0 0;
+}
+
+/* line 171, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header p {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* line 175, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav {
+  height: 30px;
+  margin: 45px 0 0;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* line 181, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul li, footer ul li {
+  float: left;
+}
+
+/* line 184, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul li a {
+  position: relative;
+  width: 112px;
+  float: left;
+  background-color: cyan;
+  margin-right: 5px;
+  text-align: center;
+  color: white;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  behaviour: url(PIE.htc);
+}
+
+/* line 198, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul li a:hover {
+  background-color: #C2CF52;
+}
+
+/* line 202, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+nav ul.account {
+  float: none;
+  margin-top: 0;
+  border: 1px solid #3FF;
+}
+
+/* line 208, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+header p {
+  text-align: right;
+}
+
+/* line 211, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#main {
+  hidden: overflow;
+  overflow: auto;
+}
+
+/* line 212, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#category #main {
+  height: 468px;
+}
+
+/* line 213, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#feature {
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+}
+
+/* line 214, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#feature img {
+  position: relative;
+}
+
+/* line 215, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.new {
+  float: left;
+}
+
+/* line 216, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.new span.overlay {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  bottom: -35px;
+  height: 35px;
+  width: 185px;
+  background-color: cyan;
+  background-color: rgba(78, 79, 72, 0.8);
+  z-index: 100;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+/* line 234, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.new a:hover span.overlay {
+  opacity: 1;
+  bottom: 0;
+}
+
+/* line 238, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+span.overlay img {
+  padding-right: 6px;
+}
+
+/* line 240, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#ad {
+  clear: both;
+  margin: 10px 0 30px;
+  color: black;
+  font-size: 2em;
+  float: left;
+}
+
+/* line 247, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#newsletter {
+  height: 70px;
+  width: 70px;
+  margin-top: 10px;
+  padding: 10px 8px;
+  background-color: cyan;
+  float: right;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 257, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#newsletter a {
+  color: #C2CF52;
+}
+
+/* line 258, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+footer {
+  clear: both;
+  font-size: .9em;
+  margin-top: 2em;
+  margin-left: -1em;
+  height: 30px;
+}
+
+/* line 266, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+footer li {
+  list-style: none;
+}
+
+/* line 267, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+footer i a {
+  padding: 0 .8em;
+  border-right: 1px solid cyan;
+  color: cyan;
+}
+
+/* line 270, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+a.last {
+  border-right: none;
+}
+
+/* line 272, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 274, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+img {
+  float: left;
+}
+
+/* line 275, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.copyright {
+  text-align: right;
+}
+
+/* Workout Navigation Overlay Menu */
+/* line 278, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#type {
+  display: none;
+  background-color: cyan;
+  width: 580px;
+  height: 260px;
+  position: absolute;
+  top: 119px;
+  left: 80px;
+  z-index: 200;
+  padding: 10px 0px 10px 10px;
+  line-height: 50px;
+  border-radius: 30px;
+  behaviour: url(PIE.htc);
+}
+
+/* line 291, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#type li {
+  float: left;
+  width: 190px;
+}
+
+/* line 292, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#type li a {
+  color: white;
+  width: 180px;
+  margin: 8px;
+  text-align: left;
+}
+
+/* line 298, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#type img {
+  padding-right: 8px;
+}
+
+/* line 300, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#price {
+  float: right;
+  margin: -20px 280px 0 0;
+  font-weight: bold;
+}
+
+/* line 305, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#add {
+  clear: both;
+  margin: -23px 180px 18px 0;
+  float: right;
+}
+
+/* line 310, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav {
+  clear: both;
+  height: 48px;
+  font-weight: bold;
+  font-size: 1.2em;
+  list-style: none;
+}
+
+/* line 317, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li {
+  float: left;
+}
+
+/* line 318, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li a {
+  position: relative;
+  display: block;
+  width: 156px;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 0 0 50px;
+  background: cyan url(../images/player.png) no-repeat;
+  border: 5px solid cyan;
+  border-bottom: none;
+  color: white;
+  margin-right: 1px;
+  -moz-border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
+  -o-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+  behavior: url(PIE.htc);
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+/* line 340, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.detail a {
+  background-position: 0 -43px;
+}
+
+/* line 341, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.video a {
+  background-position: 0 -129px;
+}
+
+/* line 342, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.review a {
+  background-position: 0 -215px;
+}
+
+/* line 344, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li a:hover {
+  background-color: #C2CF52;
+  border: 5px solid #C2CF52;
+  border-bottom: none;
+}
+
+/* line 349, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li a.active {
+  background: #ffffff url(../images/player.png) no-repeat;
+  color: cyan;
+  height: 43px;
+  border: 5px solid cyan;
+  border-bottom: none;
+  cursor: default;
+}
+
+/* line 357, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.detail a.active {
+  background-position: 0 0px;
+}
+
+/* line 358, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.video a.active {
+  background-position: 0 -86px;
+}
+
+/* line 359, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li.review a.active {
+  background-position: 0 -172px;
+}
+
+/* line 361, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav li a[href^="#reviews"] {
+  margin-right: 0;
+}
+
+/* line 363, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player_nav img {
+  vertical-align: middle;
+  margin: 0 10px;
+  float: none;
+}
+
+/* line 369, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#player {
+  width: 640px;
+  border: 5px solid cyan;
+  border-top: none;
+  min-height: 400px;
+  float: left;
+  -moz-border-radius: 0 0 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  behavior: url(PIE.htc);
+}
+
+/* line 383, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#col1 {
+  float: left;
+  width: 200px;
+  padding: 15px;
+}
+
+/* line 384, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#col1 .stock {
+  font-size: 2em;
+}
+
+/* line 385, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#col1 p {
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
+/* line 387, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#col2 {
+  float: left;
+  width: 370px;
+  padding: 15px;
+}
+
+/* line 388, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#col2 .description {
+  clear: left;
+  padding-top: 15px;
+}
+
+/* line 390, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#details, #video, #reviews {
+  clear: both;
+  overflow: hidden;
+}
+
+/* line 394, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.classify {
+  clear: right;
+  margin-top: 10px;
+}
+
+/* line 395, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.classify p {
+  line-height: 35px;
+  float: left;
+  font-weight: bold;
+}
+
+/* line 400, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+.classify img {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+/* line 403, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#details {
+  line-height: 1.4em;
+}
+
+/* line 405, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#video {
+  width: 600px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* line 410, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#reviews {
+  width: 590px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* line 416, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#reviews img {
+  float: left;
+}
+
+/* line 417, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#reviews h3 {
+  float: left;
+  margin: 0 0 5px 5px;
+  font-size: 1.1em;
+}
+
+/* line 418, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#reviews p {
+  line-height: 1.4em;
+  margin: 0 0 1.2em 0;
+}
+
+/* line 419, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+p.reviewer {
+  clear: both;
+  font-size: .95em;
+  margin: 15px 4px;
+}
+
+/* line 422, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#sidebar {
+  margin: -48px 0 0 10px;
+  padding: 10px 15px 25px;
+  width: 130px;
+  height: 420px;
+  background-color: cyan;
+  color: white;
+  float: right;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  behavior: url(PIE.htc);
+}
+
+/* line 436, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#sidebar img {
+  margin-left: 15px;
+}
+
+/* line 439, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#sidebar h3 {
+  margin: 5px 12px 10px;
+  font-size: 1.2em;
+}
+
+/* line 444, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#listing ul {
+  line-height: 50px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url(PIE.htc);
+}
+
+/* line 452, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#listing img {
+  padding-right: 8px;
+}
+
+/* line 454, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#listing li {
+  list-style: none;
+}
+
+/* line 457, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#listing li a {
+  width: 200px;
+  margin: 10px;
+  display: block;
+  float: left;
+  line-height: 50px;
+  color: cyan;
+  font-size: 1.3em;
+  margin-left: 1em;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+/* line 471, /Users/nsl4/Desktop/bwm290/Week_2_starter_files/sass_demo_copy/scss/style.scss */
+#listing li a:hover {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  behavior: url(PIE.htc);
+  background-color: #C2CF52;
+}
+
+/* Colors:
+Background: $bgcolor
+Highlight:  #C2CF52
+*/
+
+/*# sourceMappingURL=../css/style.map */
